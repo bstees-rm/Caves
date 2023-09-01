@@ -8,6 +8,7 @@
 	  	~ 'M' = Mob
 	  	~ 'Y' = Yendor Amulet
 	  	~ 'E' = Entrance/Exit
+    		~ 'm' = Market
 	  	~ ' ' = Null
 
 	Loot:
