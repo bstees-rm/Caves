@@ -34,4 +34,4 @@ Version 1.4
 
 Version 1.4.1
 
-- Minors bug fixed
+- Major bugs fixed
