@@ -8,7 +8,6 @@
 	  	~ 'M' = Mob
 	  	~ 'Y' = Yendor Amulet
 	  	~ 'E' = Entrance/Exit
-    		~ 'm' = Market
 	  	~ ' ' = Null
 
 	Loot:
@@ -27,7 +26,7 @@
  		~ Pistol (P): Damage = 15
 	 
 	Made by Michele Hotca 
-  Caves 1.4
+  	Caves 1.4
 */
 
 #include <iostream>
@@ -661,7 +660,7 @@ void gui(player p, char grid[8][8], bool discovered[8][8], int startx, int start
 				{
 					system("clear");
 					cout << "\nTrap chest!";
-					grid[p.x][p.x] = 'M';
+					grid[p.x][p.y] = 'M';
 				}
 			}
 		}
@@ -702,6 +701,11 @@ void gui(player p, char grid[8][8], bool discovered[8][8], int startx, int start
 				market(p, seed);
 			}
 			else cout << "\nYou can't enter there!";
+		}
+		else 
+		{
+			system("clear");
+			cout << "\nThis command doesn't exist";
 		}
 	}
 }
@@ -769,13 +773,13 @@ void market(player p, int seed)
 	int prices[5];
 	for (int i = 0; i < 5; i++)
 	{
-		if (items.items[i] == "Broken Bat") prices[i] == 4;
-		else if (items.items[i] == "Intact Bat") prices[i] == 7;
-		else if (items.items[i] == "Double Axe") prices[i] == 10;
-		else if (items.items[i] == "Pistol") prices[i] == 15;
-		else if (items.items[i] == "Health Potion") prices[i] == 5;
-		else if (items.items[i] == "Lantern") prices[i] == 20;
-		else if (items.items[i] == "Yendor Amulet") prices[i] == 40;
+		if (items.items[i] == "Broken Bat") prices[i] = 4;
+		else if (items.items[i] == "Intact Bat") prices[i] = 7;
+		else if (items.items[i] == "Double Axe") prices[i] = 10;
+		else if (items.items[i] == "Pistol") prices[i] = 15;
+		else if (items.items[i] == "Health Potion") prices[i] = 5;
+		else if (items.items[i] == "Lantern") prices[i] = 20;
+		else if (items.items[i] == "Yendor Amulet") prices[i] = 40;
 	}
 
 	while (choice >= 0)
